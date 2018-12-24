@@ -1,0 +1,172 @@
+<!DOCTYPE >
+<head>
+<meta charset="utf-8">
+<title>Restaurant</title>
+
+
+</head>
+
+<body>
+<script src="js/jquery.js"></script>
+<script src="js/util.js"></script>
+<script src="js/datePicker.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css"> 
+<link rel="stylesheet" href="css/datePicker.css" type="text/css"> 
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"> 
+<link rel="stylesheet" href="css/animations.css" type="text/css"> 
+<link href="css/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="css/css/fontawesome.min.css">
+
+
+<header class="hed">
+<div class="tete">
+<img src="img/home-icon.png" alt="" class="icon animation" >
+<h1 class="header-content tete text-primary animation tit">  Commandez votre table</h1></br>
+<span >
+<i class="fas fa-angle-down ic1"></i></br>
+<i class="fas fa-angle-down ic2"></i></br>
+<i class="fas fa-angle-down ic3"></i></br>
+</span>
+</div>
+</header>
+<section >
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<h1 class=" text para ">Reservation</h1>
+</div> 
+<div class="col-md-6 para">
+<p>Ce formulaire permet de commander une table dans notre restaurant, ensuite vous pouvez commande vos plats. Il faudra aussi indiquer vos coordonn&eacute;es et dans le cas de plusieurs personne, indiquer le nom de chacun d'entre eux.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section class="para">
+<div>
+A quelle date vous allez venir ? :
+<input name="date" type="text" id="date" value="" class="form-control formcon">
+
+
+    <br />
+
+<br />
+
+<form id="form1" name="form1" method="post" action="">
+Table pour combien de personnes ? 
+    <select name="nbp" id="nbp">
+      <option value="-1">--Veuillez choisir---</option>
+      <option value="1">Une place</option>
+      <option value="2">Deux places</option>
+      <option value="4">4 places</option>
+      <option value="6">6 places</option>
+    </select>
+
+   </div> 
+
+    <div >
+    <div id="chaises" class="chaises">
+    </div>
+    </div>
+</section>
+<br/>
+ 
+<section class="sectur col-md-12 text-center">
+<h2 class="text">Vos coordon&eacute;es</h2>
+Civilit&eacute; : 
+
+<input name="civilite" type="radio" value="mme" />
+Madamme 
+<input name="civilite" type="radio" value="mlle" />
+Mademoiselle 
+<input name="civilite" type="radio" value="m" />
+Monsieur 
+<br />
+Nom et pr&eacute;nom  : 
+<input name="nom" type="text" class="form-control" id="nom" size="60" />
+
+<br />
+N&deg; de t&eacute;l&eacute;phone : 
+<input name="tel" type="text" class="form-control" id="tel" />
+<br />
+
+<div id="div_accompagnateurs">Liste des accompagnateurs (une personne par ligne):
+  <br>
+  <textarea name="accompagnateurs" cols="60" rows="3" id="accompagnateurs" class="form-control"></textarea>
+  <br>
+</section>
+  
+<section class="text-center">
+  <div class="fadeInUp">
+<h2 class="text  cordo">Que voulez-vous manger ?  </h2>
+<div class="wow container"">
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+   <span class="menu"> Salade</span>
+    <label class="image-checkbox">
+      <img class="img-responsive" src="img/salade.jpg" />
+<input name="cmd" type="checkbox" value="Salade" data-prix="5" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+    <span class="menu"> Soupe</span>
+    <label class="image-checkbox">
+      <img class="img-responsive" src="img/Soupe.jpg" />
+<input name="cmd" type="checkbox" value="Soupe" data-prix="2.5" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+   <span class="menu"> Couscous</span>
+    <label class="image-checkbox">
+      <img class="img-responsive" src="img/Couscous.jpg" />
+<input name="cmd" type="checkbox" value="Couscous" data-prix="15.5" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+     <span class="menu">Riz</span>
+    <label class="image-checkbox">
+      <img class="img-responsive" src="img/Riz.jpg" />
+<input name="cmd" type="checkbox" value="Riz" data-prix="12" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+
+      <span class="menu">Fruits</span>
+    <label class="image-checkbox">
+      <img class="img-responsive" src="img/Fruits.jpg" />
+<input name="cmd" type="checkbox" value="Fruits" data-prix="7" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+   <span class="menu"> Gateaux</span>
+    <label class="image-checkbox">
+      <img class="img-responsive" src="img/Gateaux.jpg" />
+<input name="cmd" type="checkbox" value="Gateaux" data-prix="6.4" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+</div>
+
+<hr /> 
+
+  <br />
+  <div class="animatedParent">  
+  <input name="b1" type="button" id="b1" class="btn btn-primary btn-lg animated bounceInUp" value="Valider ma commande" />
+</div>
+  <br />
+</div>
+</section>
+<section class="text-center para">
+  <div id="div_resume">
+  </div>
+</section>
+</form>
+</body>
+</html>
+  
